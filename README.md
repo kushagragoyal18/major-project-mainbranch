@@ -1,4 +1,4 @@
-# Tessera
+# test:202
 
 **Privacy-preserving cloud storage with hybrid encryption and attribute-based access control.**
 
@@ -24,7 +24,7 @@ powershell -ExecutionPolicy Bypass -File .\start.ps1
 
 Then open <http://localhost:5000>. On first run the script creates a Python environment and builds the web client. You need Python 3.10+ and Node 18+; Node is only needed if `client/ui/dist` is missing.
 
-MongoDB is used when it is running on `localhost:27017`. Otherwise Tessera falls back to a local JSON metadata store automatically, so a demo never fails because the database is down.
+MongoDB is used when it is running on `localhost:27017`. Otherwise test:202 falls back to a local JSON metadata store automatically, so a demo never fails because the database is down.
 
 ### Demo hospital
 
@@ -124,7 +124,7 @@ This serves the client on :5173 and proxies `/api` to the Flask server on :5000.
 docker compose up --build
 ```
 
-This compiles PBC and Charm-Crypto, starts MongoDB, and serves Tessera on :5000. To use the web client's in-browser CP-ABE inside Docker, set `ABE_MODE=simulated` in `docker-compose.yml`.
+This compiles PBC and Charm-Crypto, starts MongoDB, and serves test:202 on :5000. To use the web client's in-browser CP-ABE inside Docker, set `ABE_MODE=simulated` in `docker-compose.yml`.
 
 ## Configuration
 

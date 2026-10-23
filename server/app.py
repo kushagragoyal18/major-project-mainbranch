@@ -729,8 +729,8 @@ if __name__ == "__main__":
         # Listen on IPv4 *and* IPv6 loopback: browsers resolve "localhost" to ::1 first,
         # and an IPv4-only server costs ~300 ms of fallback on every request.
         listen = f"{host}:{port}" if host else f"127.0.0.1:{port} [::1]:{port}"
-        logger.info(f"Tessera is running at http://localhost:{port}")
+        logger.info(f"test:202 is running at http://localhost:{port}")
         serve(app, listen=listen, threads=8)
     except ImportError:
-        logger.info(f"Tessera is running at http://localhost:{port} (Flask development server)")
+        logger.info(f"test:202 is running at http://localhost:{port} (Flask development server)")
         app.run(host=host or "127.0.0.1", port=port, threaded=True)

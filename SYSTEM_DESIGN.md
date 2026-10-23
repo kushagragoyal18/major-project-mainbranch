@@ -1,4 +1,4 @@
-# Tessera — System Design
+# test:202 — System Design
 
 **Privacy-Preserving Secure Cloud Storage with Hybrid Encryption and Attribute-Based Access Control**
 Vansh Sharma · Kushagra Goyal · Geetanshi Singh · Himanshi Kumar — Department of Computer Science & Engineering
@@ -9,7 +9,7 @@ This document describes the system as it exists in this repository. File paths a
 
 ## 1. Overview
 
-Tessera is a client-centric, zero-trust file store. Files are encrypted in the browser before upload, and decryption depends on the user's **attributes** (role, department, clearance) rather than on keys the storage provider holds.
+test:202 is a client-centric, zero-trust file store. Files are encrypted in the browser before upload, and decryption depends on the user's **attributes** (role, department, clearance) rather than on keys the storage provider holds.
 
 Each file is protected by a three-tier key hierarchy:
 
@@ -28,7 +28,7 @@ Ciphertext is additionally signed (RSA-PSS over SHA-256 of the ciphertext). Ever
 ```mermaid
 flowchart LR
     subgraph Client["User's browser"]
-        UI["Tessera web client<br/>React 19 + TypeScript + Motion<br/>(client/ui)"]
+        UI["test:202 web client<br/>React 19 + TypeScript + Motion<br/>(client/ui)"]
         WC["WebCrypto<br/>AES-GCM · RSA-OAEP · RSA-PSS · SHA-256"]
         IDB[("IndexedDB<br/>non-extractable RSA device keys")]
         SS[("sessionStorage<br/>JWT + profile")]

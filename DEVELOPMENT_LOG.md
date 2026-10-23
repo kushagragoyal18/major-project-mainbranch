@@ -160,10 +160,10 @@ This file tracks the development progress of the Privacy-Preserving Secure Cloud
 
 ---
 
-## [2026-10-23 22:15] Phase 5 — Evaluation Suite, Healthcare Demo and the Tessera Web Client
+## [2026-10-23 22:15] Phase 5 — Evaluation Suite, Healthcare Demo and the test:202 Web Client
 
 **Phase:** P5
-**What I did:** Built the evaluation suite (`evaluation/benchmarks.py`, `evaluation/revocation_cost_model.py`, charts and CSVs in `evaluation/results/`), the healthcare demo seed (`usecase/healthcare_demo.py`), and the web client **Tessera** (`client/ui/`, React + TypeScript + Motion). Added a JSON-file metadata fallback for when MongoDB is down, a Waitress production server, and one-command start scripts.
+**What I did:** Built the evaluation suite (`evaluation/benchmarks.py`, `evaluation/revocation_cost_model.py`, charts and CSVs in `evaluation/results/`), the healthcare demo seed (`usecase/healthcare_demo.py`), and the web client **test:202** (`client/ui/`, React + TypeScript + Motion). Added a JSON-file metadata fallback for when MongoDB is down, a Waitress production server, and one-command start scripts.
 **Why:** O6, O7 and the §13 Definition of Done: an end-to-end demonstrable system for the conference showcase.
 **How it works:**
 * All three tiers run in the browser with WebCrypto (`client/ui/src/lib/crypto.ts`), byte-compatible with the Python client: AES-GCM tag layout, RSA-OAEP-SHA256, and RSA-PSS with salt length 222 (= PSS.MAX_LENGTH for RSA-2048/SHA-256). Files signed by Python verify in the browser and vice versa.

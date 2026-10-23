@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Tessera — one-command local start (macOS / Linux)
+# test:202 — one-command local start (macOS / Linux)
 #   ./start.sh
 set -e
 cd "$(dirname "$0")"

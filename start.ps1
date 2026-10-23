@@ -1,4 +1,4 @@
-# Tessera — one-command local start (Windows PowerShell)
+# test:202 — one-command local start (Windows PowerShell)
 #   powershell -ExecutionPolicy Bypass -File .\start.ps1
 # Creates the Python environment and builds the web client on first run, then
 # serves everything at http://localhost:5000 and opens the browser.

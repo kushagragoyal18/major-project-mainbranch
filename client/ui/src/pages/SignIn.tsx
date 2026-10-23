@@ -37,7 +37,7 @@ export default function SignIn() {
     try {
       await signIn(username, password);
     } catch (e) {
-      setError(e instanceof ApiError ? e.message : "Could not reach the Tessera server.");
+      setError(e instanceof ApiError ? e.message : "Could not reach the test:202 server.");
       setBusy(null);
     }
   }
@@ -62,7 +62,7 @@ export default function SignIn() {
       <section className="signin-story">
         <div className="hstack" style={{ gap: 10 }}>
           <Logo size={30} />
-          <span className="brand-name" style={{ fontSize: "1.0625rem" }}>Tessera</span>
+          <span className="brand-name" style={{ fontSize: "1.0625rem" }}>test:202</span>
         </div>
 
         <div style={{ maxWidth: 520, margin: "48px 0" }}>

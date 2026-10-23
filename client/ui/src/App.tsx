@@ -58,7 +58,7 @@ export default function App() {
   return (
     <div className="shell">
       <nav className="sidebar" aria-label="Sections">
-        <div className="brand"><Logo size={26} /><span className="brand-name">Tessera</span></div>
+        <div className="brand"><Logo size={26} /><span className="brand-name">test:202</span></div>
         {NAV.map((n) => {
           const header = n.group !== lastGroup ? <div className="nav-label" key={`g-${n.group}`}>{n.group}</div> : null;
           lastGroup = n.group;

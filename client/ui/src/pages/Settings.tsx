@@ -97,7 +97,7 @@ export default function Settings({ go }: { go: (r: Route) => void }) {
             <span className="icon-tile" style={{ background: "var(--green)" }}><Server size={16} /></span>
             <div className="row-main">
               <div className="row-title">{health ? "Connected" : "Offline"}</div>
-              <div className="row-sub">Tessera {health?.version}</div>
+              <div className="row-sub">test:202 {health?.version}</div>
             </div>
           </div>
           <div className="row"><span className="row-main muted">CP-ABE engine</span><span>{health?.abe_mode === "simulated" ? "Simulated (same interface as BSW07)" : "Charm-Crypto BSW07"}</span></div>
