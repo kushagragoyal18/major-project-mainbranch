@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tessera",
+      "runtimeExecutable": ".venv-win/Scripts/python.exe",
+      "runtimeArgs": ["-m", "server.app"],
+      "port": 5000,
+      "env": { "ABE_MODE": "simulated", "PYTHONUNBUFFERED": "1" }
+    }
+  ]
+}

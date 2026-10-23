@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv-win/
+.pytest_cache/
+.env
+
+# Runtime data (ciphertext blobs and the local metadata fallback)
+local_storage/
+
+# Web client
+client/ui/node_modules/

@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  db:
+    image: mongo:6.0
+    container_name: secure_storage_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - app-network
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: secure_storage_server
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=server/app.py
+      - FLASK_ENV=development
+      - MONGO_URI=mongodb://db:27017/secure_storage
+      - ABE_MODE=real # Can change to 'simulated' if we want to bypass real Charm-Crypto
+      - JWT_SECRET=super-secret-dev-jwt-key-change-in-production
+      - AWS_ACCESS_KEY_ID=mock_key_id
+      - AWS_SECRET_ACCESS_KEY=mock_secret_key
+      - AWS_REGION=us-east-1
+      - S3_BUCKET_NAME=secure-cloud-storage-bucket
+      - USE_LOCAL_STORAGE=true # Use local mock storage instead of real S3 for dev/testing
+      - LOCAL_STORAGE_DIR=/app/local_storage
+      - HOST=0.0.0.0
+      - DEMO_MODE=true
+    command: ["python", "-m", "server.app"]
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
